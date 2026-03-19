@@ -20,7 +20,7 @@ public class PatientMapper { // Mapper class is used to return the dedicated DTO
 
     public static Patient toModel(PatientRequestDTO patientRequestDTO){  // for creating new patient
         Patient patient = new Patient();           // creates the new object
-        patient.setName(patientRequestDTO.getName()); // new pbject's name is created by the patientRequestDto object
+        patient.setName(patientRequestDTO.getName()); // new object's name is created by the patientRequestDto object
         patient.setAddress(patientRequestDTO.getAddress());
         patient.setEmail(patient.getEmail());
         patient.setDateOfBirth(LocalDate.parse(patientRequestDTO.getDateOfBirth())); // patient is instance of the patient model class so the DOB should be in LocalDate  but in the patientRequestDTO it is in String so we convert it to localDate by parsing
